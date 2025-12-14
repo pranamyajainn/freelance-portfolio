@@ -13,77 +13,81 @@ export default function ContactForm() {
     const [state, formAction, pending] = useActionState(submitLead, initialState)
 
     return (
-        <form action={formAction} className="space-y-6 w-full max-w-md mx-auto">
+        <form action={formAction} className="space-y-8 w-full max-w-md mx-auto">
             {state.message && (
-                <div className={`p-4 rounded-lg text-sm ${state.success ? 'bg-emerald-50 text-emerald-700 border border-emerald-100' : 'bg-red-50 text-red-700 border border-red-100'}`}>
+                <div className={`p-4 rounded-[12px] text-sm ${state.success ? 'bg-emerald-50 text-emerald-700 border border-emerald-100' : 'bg-red-50 text-red-700 border border-red-100'}`}>
                     {state.message}
                 </div>
             )}
 
-            <div className="space-y-2">
-                <label htmlFor="name" className="text-sm font-medium text-neutral-700 font-geist">Name</label>
-                <input
-                    required
-                    type="text"
-                    id="name"
-                    name="name"
-                    placeholder="John Doe"
-                    className="w-full rounded-lg border border-neutral-200 bg-white px-4 py-2.5 text-sm text-neutral-900 placeholder:text-neutral-400 focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500 transition-all font-geist"
-                />
-                {state.errors?.name && <p className="text-xs text-red-500">{state.errors.name[0]}</p>}
-            </div>
+            <div className="space-y-6">
+                <div className="space-y-2">
+                    <label htmlFor="name" className="text-xs uppercase tracking-wider text-neutral-500 font-semibold font-geist pl-1">Your Name*</label>
+                    <input
+                        required
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="John Doe"
+                        className="w-full rounded-[12px] border border-transparent bg-neutral-100/50 px-4 py-3.5 text-sm text-neutral-900 placeholder:text-neutral-400 focus:border-neutral-300 focus:bg-white focus:outline-none focus:shadow-[inset_0_1px_2px_rgba(0,0,0,0.06)] transition-all duration-200 font-geist"
+                    />
+                    {state.errors?.name && <p className="text-xs text-red-500 pl-1">{state.errors.name[0]}</p>}
+                </div>
 
-            <div className="space-y-2">
-                <label htmlFor="email" className="text-sm font-medium text-neutral-700 font-geist">Email</label>
-                <input
-                    required
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="john@company.com"
-                    className="w-full rounded-lg border border-neutral-200 bg-white px-4 py-2.5 text-sm text-neutral-900 placeholder:text-neutral-400 focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500 transition-all font-geist"
-                />
-                {state.errors?.email && <p className="text-xs text-red-500">{state.errors.email[0]}</p>}
-            </div>
+                <div className="space-y-2">
+                    <label htmlFor="email" className="text-xs uppercase tracking-wider text-neutral-500 font-semibold font-geist pl-1">Work Email*</label>
+                    <input
+                        required
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="john@company.com"
+                        className="w-full rounded-[12px] border border-transparent bg-neutral-100/50 px-4 py-3.5 text-sm text-neutral-900 placeholder:text-neutral-400 focus:border-neutral-300 focus:bg-white focus:outline-none focus:shadow-[inset_0_1px_2px_rgba(0,0,0,0.06)] transition-all duration-200 font-geist"
+                    />
+                    {state.errors?.email && <p className="text-xs text-red-500 pl-1">{state.errors.email[0]}</p>}
+                </div>
 
-            <div className="space-y-2">
-                <label htmlFor="company" className="text-sm font-medium text-neutral-700 font-geist">Company (Optional)</label>
-                <input
-                    type="text"
-                    id="company"
-                    name="company"
-                    placeholder="Acme Inc."
-                    className="w-full rounded-lg border border-neutral-200 bg-white px-4 py-2.5 text-sm text-neutral-900 placeholder:text-neutral-400 focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500 transition-all font-geist"
-                />
-            </div>
+                <div className="space-y-2">
+                    <label htmlFor="company" className="text-xs uppercase tracking-wider text-neutral-500 font-semibold font-geist pl-1">Company Name & Role*</label>
+                    <input
+                        required
+                        type="text"
+                        id="company"
+                        name="company"
+                        placeholder="Acme Inc., VP of Engineering"
+                        className="w-full rounded-[12px] border border-transparent bg-neutral-100/50 px-4 py-3.5 text-sm text-neutral-900 placeholder:text-neutral-400 focus:border-neutral-300 focus:bg-white focus:outline-none focus:shadow-[inset_0_1px_2px_rgba(0,0,0,0.06)] transition-all duration-200 font-geist"
+                    />
+                    {state.errors?.company && <p className="text-xs text-red-500 pl-1">{state.errors.company[0]}</p>}
+                </div>
 
-            <div className="space-y-2">
-                <label htmlFor="message" className="text-sm font-medium text-neutral-700 font-geist">Message</label>
-                <textarea
-                    required
-                    id="message"
-                    name="message"
-                    rows={4}
-                    placeholder="Tell us about your project..."
-                    className="w-full rounded-lg border border-neutral-200 bg-white px-4 py-2.5 text-sm text-neutral-900 placeholder:text-neutral-400 focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500 transition-all font-geist resize-none"
-                />
-                {state.errors?.message && <p className="text-xs text-red-500">{state.errors.message[0]}</p>}
+                <div className="space-y-2">
+                    <label htmlFor="message" className="text-xs uppercase tracking-wider text-neutral-500 font-semibold font-geist pl-1">Tell me about your AI challenge</label>
+                    <textarea
+                        required
+                        id="message"
+                        name="message"
+                        rows={4}
+                        placeholder="E.g., &quot;We built a model but can't deploy it&quot; or &quot;We're drowning in unstructured data&quot;"
+                        className="w-full rounded-[12px] border border-transparent bg-neutral-100/50 px-4 py-3.5 text-sm text-neutral-900 placeholder:text-neutral-400 focus:border-neutral-300 focus:bg-white focus:outline-none focus:shadow-[inset_0_1px_2px_rgba(0,0,0,0.06)] transition-all duration-200 font-geist resize-none"
+                    />
+                    {state.errors?.message && <p className="text-xs text-red-500 pl-1">{state.errors.message[0]}</p>}
+                </div>
             </div>
 
             <button
                 type="submit"
                 disabled={pending}
-                className="w-full inline-flex items-center justify-center gap-2 rounded-lg bg-indigo-600 px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-indigo-500 hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed font-geist"
+                className="w-full h-14 inline-flex items-center justify-center gap-2 rounded-[12px] bg-neutral-900 px-8 text-sm font-semibold text-white transition-all hover:bg-neutral-800 active:scale-[0.98] shadow-[0_1px_2px_rgba(0,0,0,0.06)] disabled:opacity-50 disabled:cursor-not-allowed font-geist group"
             >
                 {pending ? (
                     <>
-                        <Loader2 className="h-4 w-4 animate-spin" />
-                        Sending...
+                        <Loader2 className="h-4 w-4 animate-spin text-neutral-400" />
+                        <span className="text-neutral-300">Sending...</span>
                     </>
                 ) : (
                     <>
                         Send Message
-                        <Send className="h-4 w-4" />
+                        <Send className="h-4 w-4 text-neutral-400 transition-transform group-hover:translate-x-1 group-hover:text-white" />
                     </>
                 )}
             </button>

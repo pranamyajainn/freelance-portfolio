@@ -185,8 +185,8 @@ export const services: Service[] = [
 export const allServiceCards: ServiceCard[] = [
     {
         id: 'lead-gen-card',
-        title: 'Help with Lead Generation?',
-        description: 'If you need my help with getting more leads, appointments and customers through the power of AI-Automations.',
+        title: 'Lead Generation That Runs 24/7',
+        description: 'Automated systems that captured 100% of buyer conversations across 12+ communities. Delivered 15-30 qualified prospects daily for hiring agencies.',
         image: '/3d-icons/lead-gen.png',
         cta: {
             label: 'Book Now',
@@ -197,20 +197,19 @@ export const allServiceCards: ServiceCard[] = [
     },
     {
         id: 'ai-automation-card',
-        title: 'Help with AI Automation?',
-        description: 'If you need my help with AI-Automations to streamline your business operations weather it is sales, customer support or delivery.',
+        title: 'No Black Boxes. You Own the Code.',
+        description: 'Production AI automation with n8n, ComfyUI, and custom pipelines. Systems built have generated $2.5M+ in verified revenue.',
         image: '/3d-icons/automation.png',
         cta: {
-            label: 'Book Now',
-            href: 'https://cal.com/pranamyajain',
+            label: 'See Projects',
+            href: '/case-studies',
             variant: 'secondary',
-            external: true,
         },
     },
     {
         id: 'consultation-card',
-        title: 'Looking for a Paid Consultation?',
-        description: 'Book me and my team for a paid consultation regarding AI-Automation, Lead Generation, Cold Email and more.',
+        title: 'Avoid Costly AI Mistakes',
+        description: 'Strategic sessions to evaluate opportunities and create clear implementation roadmaps. Perfect for teams stuck at 80% on pilot projects.',
         image: '/3d-icons/consultation.png',
         cta: {
             label: 'Book Now',

@@ -1,3 +1,4 @@
+import React from 'react';
 import { caseStudies } from '@/data/case-studies';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
@@ -75,7 +76,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
                     {study.content.split('\n').map((line, i) => {
                         // Helper function to process inline markdown (bold, links)
                         const processInlineMarkdown = (text: string) => {
-                            const parts: (string | JSX.Element)[] = [];
+                            const parts: (string | React.ReactNode)[] = [];
                             let lastIndex = 0;
 
                             // Process bold (**text**)
