@@ -1,36 +1,155 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Pranamya Jain - Applied AI Portfolio
 
-## Getting Started
+A modern, production-ready portfolio website showcasing Applied AI solutions and expertise. Built with Next.js 16, featuring stunning 3D backgrounds, responsive design, and comprehensive SEO optimization.
 
-First, run the development server:
+## 🚀 Features
 
+- **Modern Design**: Premium UI with 3D Spline backgrounds and smooth animations
+- **Fully Responsive**: Optimized for mobile, tablet, and desktop
+- **SEO Optimized**: Complete metadata, OpenGraph, and Twitter Card support
+- **Case Studies**: Dynamic case study pages with SSG
+- **Contact Form**: Integrated with Supabase and Resend for lead capture
+- **Accessibility**: ARIA labels, semantic HTML, keyboard navigation
+- **Performance**: Image optimization, lazy loading, security headers
+
+## 🛠 Tech Stack
+
+- **Framework**: Next.js 16 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS 4
+- **3D Graphics**: Spline Design
+- **Database**: Supabase (optional)
+- **Email**: Resend API (optional)
+- **Deployment**: Vercel
+
+## 📦 Getting Started
+
+### Prerequisites
+
+- Node.js 18+ and npm
+- (Optional) Supabase account for contact form database
+- (Optional) Resend account for email notifications
+
+### Installation
+
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone <repository-url>
+cd Pranamya
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Set up environment variables (optional):
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Create a `.env.local` file in the root directory:
 
-## Learn More
+```bash
+# Supabase Configuration (optional)
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_url_here
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key_here
 
-To learn more about Next.js, take a look at the following resources:
+# Resend Email Configuration (optional)
+RESEND_API_KEY=your_resend_api_key_here
+CONTACT_EMAIL=your_email@domain.com
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**Note**: The contact form works in mock mode without these variables for development/demo purposes.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+4. Run the development server:
+```bash
+npm run dev
+```
 
-## Deploy on Vercel
+Open [http://localhost:3000](http://localhost:3000) to view the site.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🏗 Building for Production
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm run build
+npm start
+```
+
+## 📝 Production Deployment Checklist
+
+Before deploying to production, ensure:
+
+- [ ] Environment variables configured (if using Supabase/Resend)
+- [ ] All navigation links tested
+- [ ] Contact form tested with actual credentials
+- [ ] Images optimized and loading correctly
+- [ ] SEO metadata verified on all pages
+- [ ] Lighthouse audit score reviewed (Performance, Accessibility, SEO)
+- [ ] Mobile responsiveness tested
+- [ ] 3D background loading properly
+- [ ] All external links have `rel="noopener noreferrer"`
+- [ ] Security headers configured in `next.config.ts`
+
+## 🔒 Security Features
+
+- Content Security headers configured
+- Iframe sandboxing for 3D backgrounds
+- XSS protection via Next.js built-in features
+- Environment variables for sensitive data
+
+## 📱 Pages
+
+- **Home** (`/`): Hero grid with services, portfolio preview, stats
+- **Case Studies** (`/case-studies`): Grid of all case studies
+- **Case Study Detail** (`/case-studies/[slug]`): Individual case study pages
+- **Contact** (`/contact`): Contact form with validation
+
+## 🎨 Customization
+
+### Updating Content
+
+- **Case Studies**: Edit `/data/case-studies.ts`
+- **Personal Info**: Update `/app/layout.tsx` metadata and `/components/sections/HeroGrid.tsx`
+- **Services**: Modify services section in `/components/sections/HeroGrid.tsx`
+- **Technologies**: Update tech stack in `/components/sections/HeroGrid.tsx`
+
+### Styling
+
+- **Colors**: Modify Tailwind classes throughout components
+- **Fonts**: Configure in `/app/layout.tsx` (currently using Geist and Inter)
+- **3D Background**: Replace Spline embed URL in `/app/layout.tsx`
+
+## 📊 SEO Configuration
+
+All pages include:
+- Title tags optimized for search
+- Meta descriptions
+- OpenGraph tags for social sharing
+- Twitter Card support
+- Structured data ready
+- Sitemap auto-generated by Next.js
+
+## 🐛 Troubleshooting
+
+**Contact form not working?**
+- Check environment variables are set correctly
+- Verify Supabase table exists (table name: `leads`)
+- Confirm Resend API key is valid
+
+**Images not loading?**
+- Ensure domains are configured in `next.config.ts`
+- Check image URLs are accessible
+
+**3D background not showing?**
+- Verify Spline embed URL is correct
+- Check iframe sandbox permissions
+
+## 📄 License
+
+All rights reserved © 2025 Pranamya Jain
+
+## 🤝 Contact
+
+For inquiries or collaboration opportunities, visit [the contact page](/contact) or connect via the portfolio.
+
+---
+
+Built with ❤️ using Next.js, TypeScript, and Tailwind CSS
