@@ -1,8 +1,9 @@
 'use client'
 
-import { useActionState } from 'react'
+import { useActionState, useEffect } from 'react'
 import { submitLead, type FormState } from '@/app/actions/submit-lead'
-import { Loader2, Send } from 'lucide-react'
+import { Loader2, Send, CheckCircle2 } from 'lucide-react'
+import confetti from 'canvas-confetti'
 
 const initialState: FormState = {
     success: false,
@@ -12,10 +13,59 @@ const initialState: FormState = {
 export default function ContactForm() {
     const [state, formAction, pending] = useActionState(submitLead, initialState)
 
+    // Trigger confetti on success
+    useEffect(() => {
+        if (state.success) {
+            const end = Date.now() + 3 * 1000;
+            const colors = ['#6366f1', '#10b981', '#06b6d4', '#8b5cf6'];
+
+            (function frame() {
+                confetti({
+                    particleCount: 2,
+                    angle: 60,
+                    spread: 55,
+                    origin: { x: 0 },
+                    colors: colors
+                });
+                confetti({
+                    particleCount: 2,
+                    angle: 120,
+                    spread: 55,
+                    origin: { x: 1 },
+                    colors: colors
+                });
+
+                if (Date.now() < end) {
+                    requestAnimationFrame(frame);
+                }
+            }());
+        }
+    }, [state.success]);
+
+    if (state.success) {
+        return (
+            <div className="w-full max-w-md mx-auto p-8 rounded-[24px] bg-white border border-emerald-100 shadow-xl flex flex-col items-center justify-center text-center animate-in fade-in zoom-in duration-500">
+                <div className="w-20 h-20 rounded-full bg-emerald-100 flex items-center justify-center mb-6 animate-in slide-in-from-bottom-4 duration-700 delay-100">
+                    <CheckCircle2 className="w-10 h-10 text-emerald-600" />
+                </div>
+                <h3 className="text-2xl font-bold text-neutral-900 mb-2 font-geist">Message sent successfully!</h3>
+                <p className="text-neutral-500 font-geist">I'll get back to you within 24 hours.</p>
+                <div className="mt-8">
+                    <button
+                        onClick={() => window.location.reload()}
+                        className="text-sm text-neutral-400 hover:text-neutral-600 font-medium transition-colors"
+                    >
+                        Send another message
+                    </button>
+                </div>
+            </div>
+        )
+    }
+
     return (
         <form action={formAction} className="space-y-8 w-full max-w-md mx-auto">
-            {state.message && (
-                <div className={`p-4 rounded-[12px] text-sm ${state.success ? 'bg-emerald-50 text-emerald-700 border border-emerald-100' : 'bg-red-50 text-red-700 border border-red-100'}`}>
+            {state.message && !state.success && (
+                <div className="p-4 rounded-[12px] text-sm bg-red-50 text-red-700 border border-red-100">
                     {state.message}
                 </div>
             )}

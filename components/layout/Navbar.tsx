@@ -1,15 +1,37 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Menu, MessageCircle, X } from 'lucide-react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
+
+  // Close menu on route change
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+  }, [pathname]);
+
+  // Lock body scroll when menu is open
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+      document.documentElement.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+      document.documentElement.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+      document.documentElement.style.overflow = '';
+    };
+  }, [isMobileMenuOpen]);
 
   return (
     <header className="bg-transparent relative z-50">
-      <nav className="flex max-w-7xl lg:px-8 mr-auto ml-auto pt-6 pr-4 pb-6 pl-4 items-center justify-between">
+      <nav className="flex max-w-7xl lg:px-8 mx-auto pt-4 sm:pt-6 px-3 sm:px-4 pb-4 sm:pb-6 items-center justify-between">
         <div className="flex items-center space-x-3">
           <span className="text-xl font-bold tracking-tight font-geist">Pranamya Jain</span>
         </div>
@@ -17,18 +39,20 @@ export default function Navbar() {
         {/* Mobile Toggle */}
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className="lg:hidden rounded-lg p-2 hover:bg-neutral-100 transition-colors"
+          className="lg:hidden relative z-50 rounded-lg p-2 hover:bg-neutral-100 transition-colors"
           aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
         >
           {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
 
         {/* Navigation Links */}
-        <ul className={`fixed inset-0 z-40 flex flex-col gap-8 lg:static lg:flex lg:flex-row lg:bg-transparent lg:gap-8 lg:backdrop-blur-none bg-white/95 backdrop-blur-md items-center justify-center transition-all duration-300 ${isMobileMenuOpen ? 'flex' : 'hidden'}`}>
+        <ul
+          onClick={() => setIsMobileMenuOpen(false)}
+          className={`fixed inset-0 z-40 flex flex-col gap-8 lg:static lg:flex lg:flex-row lg:bg-transparent lg:gap-8 lg:backdrop-blur-none bg-white/95 backdrop-blur-md items-center justify-center transition-all duration-300 ${isMobileMenuOpen ? 'flex' : 'hidden'}`}
+        >
           <li><Link href="/" className="hover:text-indigo-600 transition-colors duration-200 text-base font-medium font-geist">Home</Link></li>
           <li><Link href="/case-studies" className="text-base font-medium hover:text-indigo-600 transition-colors duration-200 font-geist">Portfolio</Link></li>
           <li><Link href="/services" className="text-base font-medium hover:text-indigo-600 transition-colors duration-200 font-geist">Services</Link></li>
-          <li><Link href="/#about" className="hover:text-indigo-600 transition-colors duration-200 text-base font-medium font-geist">About</Link></li>
           <li><Link href="/contact" className="hover:text-indigo-600 transition-colors duration-200 text-base font-medium font-geist">Contact</Link></li>
 
           {/* Mobile Only Call to Action */}

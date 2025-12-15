@@ -3,8 +3,8 @@ import Link from 'next/link';
 
 export default function HeroGrid() {
     return (
-        <section className="md:p-8 bg-white border-neutral-100 border rounded-3xl pt-4 pr-4 pb-4 pl-2 shadow-sm hover:shadow-md transition-shadow duration-300">
-            <div className="grid auto-rows-[240px] gap-4 md:auto-rows-[300px] lg:auto-rows-[360px] md:grid-cols-3">
+        <section className="p-4 md:p-8 bg-white border-neutral-100 border rounded-3xl shadow-sm hover:shadow-md transition-shadow duration-300">
+            <div className="grid auto-rows-[minmax(240px,auto)] gap-4 md:auto-rows-[minmax(300px,auto)] lg:auto-rows-[minmax(360px,auto)] md:grid-cols-3">
 
                 {/* Big Hero Card */}
                 <article className="relative col-span-1 row-span-2 overflow-hidden md:col-span-2 group rounded-2xl hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
@@ -12,12 +12,14 @@ export default function HeroGrid() {
                         src="/pranamya-hero-bg.jpg"
                         alt="Creative workspace with 3D elements"
                         className="h-full w-full transition-transform duration-700 group-hover:scale-105 object-cover"
+                        decoding="async"
+                        fetchPriority="high"
                     />
                     <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/80 group-hover:from-black/70 group-hover:via-black/50 group-hover:to-black/90 transition-all duration-300"></div>
                     <div className="absolute inset-y-0 left-0 w-full md:w-1/3 bg-gradient-to-r from-black/60 to-transparent pointer-events-none"></div>
-                    <div className="absolute inset-0 flex flex-col md:p-10 pt-6 pr-6 pb-6 pl-6 justify-between">
+                    <div className="absolute inset-0 flex flex-col p-4 sm:p-6 md:p-10 justify-between">
                         <div className="flex items-start justify-between">
-                            <h1 className="max-w-sm leading-[0.85] md:text-4xl lg:text-5xl text-3xl text-white tracking-tighter font-geist font-black drop-shadow-xl group-hover:text-indigo-100 transition-colors duration-300">
+                            <h1 className="max-w-sm leading-[0.85] text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white tracking-tighter font-geist font-black drop-shadow-xl group-hover:text-indigo-100 transition-colors duration-300 break-words">
                                 Most AI Projects <span className="text-rose-400/90 font-serif italic">Fail</span>
                                 <br />
                                 <span className="bg-black/10 backdrop-blur-[2px] rounded-lg px-2 tracking-tighter text-indigo-400 font-geist font-black drop-shadow-xl group-hover:text-indigo-300 transition-all duration-300">
@@ -31,7 +33,7 @@ export default function HeroGrid() {
                         </div>
                         <div className="flex items-end justify-between">
                             <div>
-                                <p className="max-w-md text-white/90 text-sm md:text-base font-light font-geist group-hover:text-white transition-colors duration-300">
+                                <p className="max-w-md text-white/90 text-xs sm:text-sm md:text-base font-light font-geist group-hover:text-white transition-colors duration-300 break-words">
                                     Leverage the AI systems that generate <span className="font-bold">$2.5M+</span> in verified revenue. No buzzwords. Just deploy, revenue-generating AI.
                                 </p>
                                 <div className="mt-4 flex items-center gap-4">
@@ -55,7 +57,7 @@ export default function HeroGrid() {
                 {/* Services Card */}
                 <Link href="/services" id="services" className="flex flex-col overflow-hidden group relative hover:from-neutral-800 hover:to-neutral-700 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 text-white bg-[url('https://cdn.midjourney.com/4f451a3a-9360-4c27-abdb-e5bb725db2c1/0_0.png?w=800&q=80')] bg-cover rounded-2xl justify-between">
                     <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/40 to-black/80 z-0"></div>
-                    <div className="p-6 relative z-10">
+                    <div className="p-4 sm:p-6 relative z-10">
                         <div className="flex items-center justify-between mb-4">
                             <div className="flex items-center gap-2">
                                 <span className="text-sm font-bold text-white font-geist drop-shadow-md group-hover:text-neutral-100 transition-colors duration-300">Services</span>
@@ -64,8 +66,8 @@ export default function HeroGrid() {
                                 <ArrowUpRight className="h-4 w-4" />
                             </div>
                         </div>
-                        <h3 className="text-xl font-black mb-2 font-geist drop-shadow-lg group-hover:text-indigo-100 transition-colors duration-300">Real ROI & Ownership</h3>
-                        <p className="text-sm text-white font-bold mb-4 font-geist drop-shadow-md group-hover:text-neutral-100 transition-colors duration-300">
+                        <h3 className="text-lg sm:text-xl font-black mb-2 font-geist drop-shadow-lg group-hover:text-indigo-100 transition-colors duration-300 break-words">Real ROI & Ownership</h3>
+                        <p className="text-xs sm:text-sm text-white font-bold mb-4 font-geist drop-shadow-md group-hover:text-neutral-100 transition-colors duration-300 break-words">
                             No black boxes. You own the code, the models, and the competitive advantage.
                         </p>
                         <div className="space-y-2">
@@ -88,7 +90,7 @@ export default function HeroGrid() {
                 {/* Portfolio Card */}
                 <Link href="/case-studies" className="relative overflow-hidden group hover:border-indigo-200 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 bg-white border-neutral-100 border rounded-2xl block">
                     <div className="absolute inset-0">
-                        <img src="https://cdn.midjourney.com/7277ca39-c0ba-4045-b7f5-f2ae4aff372c/0_2.png" alt="Modern 3D design showcase" className="h-full w-full object-cover opacity-20 transition-opacity duration-300 group-hover:opacity-30" />
+                        <img src="https://cdn.midjourney.com/7277ca39-c0ba-4045-b7f5-f2ae4aff372c/0_2.png" alt="Modern 3D design showcase" className="h-full w-full object-cover opacity-20 transition-opacity duration-300 group-hover:opacity-30" loading="lazy" decoding="async" />
                     </div>
                     <div className="relative h-full flex flex-col pt-6 pr-6 pb-6 pl-6 justify-between">
                         <div className="flex items-center justify-between">
@@ -98,7 +100,7 @@ export default function HeroGrid() {
                             </span>
                         </div>
                         <div className="">
-                            <h3 className="text-2xl mb-2 tracking-tight font-geist group-hover:text-indigo-700 transition-colors duration-300">21+ Projects Delivered</h3>
+                            <h3 className="text-xl sm:text-2xl mb-2 tracking-tight font-geist group-hover:text-indigo-700 transition-colors duration-300 break-words">21+ Projects Delivered</h3>
                             <p className="text-sm text-neutral-600 font-geist group-hover:text-neutral-700 transition-colors duration-300">Curated case studies on Lead Generation with AI</p>
                         </div>
                     </div>
@@ -107,7 +109,7 @@ export default function HeroGrid() {
                 {/* Expertise/Team Card */}
                 <article id="about" className="flex flex-col group text-white bg-[url('/pranamya-team-bg.jpg')] bg-cover bg-center rounded-2xl justify-between hover:shadow-lg transition-all duration-300 hover:-translate-y-1 relative overflow-hidden">
                     <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/40 to-black/80 z-0"></div>
-                    <div className="relative z-10 flex flex-col justify-between h-full p-6">
+                    <div className="relative z-10 flex flex-col justify-between h-full p-4 sm:p-6">
                         <div className="flex items-center justify-between">
                             <div className="flex items-center gap-2">
                                 <span className="text-sm font-bold text-indigo-100 font-geist group-hover:text-indigo-50 transition-colors duration-300">Network</span>
@@ -118,12 +120,12 @@ export default function HeroGrid() {
                         </div>
                         <div className="mt-4">
                             <p className="text-sm text-indigo-100 mb-2 font-geist font-bold group-hover:text-indigo-50 transition-colors duration-300">Asia&apos;s largest AI builder community</p>
-                            <span className="text-3xl font-geist font-bold group-hover:text-indigo-50 transition-colors duration-300">800K+</span>
+                            <span className="text-2xl sm:text-3xl font-geist font-bold group-hover:text-indigo-50 transition-colors duration-300 break-words">800K+</span>
                             <div className="flex gap-2 mt-3 items-center">
                                 <div className="flex -space-x-2">
-                                    <img src="https://images.unsplash.com/photo-1500649297466-74794c70acfc?w=320&q=80" alt="Avatar 1" className="h-6 w-6 rounded-full border-2 border-white/30 object-cover group-hover:border-white/50 transition-all duration-300" />
-                                    <img src="https://images.unsplash.com/photo-1509967419530-da38b4704bc6?w=320&q=80" alt="Avatar 2" className="h-6 w-6 rounded-full border-2 border-white/30 object-cover group-hover:border-white/50 transition-all duration-300" />
-                                    <img src="https://images.unsplash.com/photo-1506863530036-1efeddceb993?w=320&q=80" alt="Avatar 3" className="h-6 w-6 rounded-full border-2 border-white/30 object-cover group-hover:border-white/50 transition-all duration-300" />
+                                    <img src="https://images.unsplash.com/photo-1500649297466-74794c70acfc?w=320&q=80" alt="Avatar 1" className="h-6 w-6 rounded-full border-2 border-white/30 object-cover group-hover:border-white/50 transition-all duration-300" loading="lazy" decoding="async" />
+                                    <img src="https://images.unsplash.com/photo-1509967419530-da38b4704bc6?w=320&q=80" alt="Avatar 2" className="h-6 w-6 rounded-full border-2 border-white/30 object-cover group-hover:border-white/50 transition-all duration-300" loading="lazy" decoding="async" />
+                                    <img src="https://images.unsplash.com/photo-1506863530036-1efeddceb993?w=320&q=80" alt="Avatar 3" className="h-6 w-6 rounded-full border-2 border-white/30 object-cover group-hover:border-white/50 transition-all duration-300" loading="lazy" decoding="async" />
                                 </div>
                                 <span className="text-xs text-indigo-100 font-geist font-bold group-hover:text-indigo-50 transition-colors duration-300">AI Agencies & AI Engineers</span>
                             </div>
@@ -144,7 +146,7 @@ export default function HeroGrid() {
                     </div>
                     <div className="mt-4">
                         <p className="text-sm text-neutral-500 mb-2 font-geist group-hover:text-neutral-600 transition-colors duration-300">Verified Client Revenue</p>
-                        <span className="text-3xl text-neutral-900 font-geist group-hover:text-emerald-700 transition-colors duration-300">$2.5M+</span>
+                        <span className="text-2xl sm:text-3xl text-neutral-900 font-geist group-hover:text-emerald-700 transition-colors duration-300 break-words">$2.5M+</span>
                         <p className="text-xs text-neutral-400 mt-1 font-geist group-hover:text-neutral-500 transition-colors duration-300">Generated by our AI systems across all Clients</p>
                     </div>
                 </article>
@@ -157,7 +159,7 @@ export default function HeroGrid() {
                         </div>
                     </div>
                     {['ComfyUI', 'n8n', 'API Integrations', 'Vector Databases', 'RAG Pipelines', 'Embedding Models', 'Flux', 'Stable Diffusion', 'LoRA Training', 'Fine tuning'].map((tech) => (
-                        <span key={tech} className="rounded-full bg-white border border-neutral-200 px-3 py-1.5 text-sm font-medium hover:border-indigo-200 hover:bg-indigo-50 hover:text-indigo-600 transition-all duration-200 hover:scale-105 cursor-pointer font-geist">
+                        <span key={tech} className="rounded-full bg-white border border-neutral-200 px-2 sm:px-3 py-1 sm:py-1.5 text-xs sm:text-sm font-medium hover:border-indigo-200 hover:bg-indigo-50 hover:text-indigo-600 transition-all duration-200 hover:scale-105 cursor-pointer font-geist break-words">
                             {tech}
                         </span>
                     ))}

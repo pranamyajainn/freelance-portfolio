@@ -21,7 +21,7 @@ export default function ContactPage() {
             {/* Wave dampener */}
             <div className="fixed inset-0 bg-white/60 backdrop-blur-[1px] -z-10" />
 
-            <div className="absolute top-8 left-8 z-20">
+            <div className="absolute top-4 left-4 sm:top-8 sm:left-8 z-20">
                 <Link href="/" className="group flex items-center gap-2 text-neutral-500 hover:text-neutral-900 transition-colors px-4 py-2">
                     <ArrowLeft className="h-4 w-4 transition-transform group-hover:-translate-x-1" />
                     <span className="text-sm font-medium tracking-tight">Back</span>
@@ -30,10 +30,10 @@ export default function ContactPage() {
 
             <div className="w-full max-w-3xl relative z-10">
                 <OrbitalWrapper>
-                    <div className="bg-white/95 backdrop-blur-xl rounded-[24px] p-10 md:p-16 shadow-[0_1px_2px_rgba(0,0,0,0.06),0_8px_24px_rgba(0,0,0,0.03)] border border-neutral-200/60">
+                    <div className="bg-white/95 backdrop-blur-xl rounded-[24px] p-6 sm:p-8 md:p-12 lg:p-16 shadow-[0_1px_2px_rgba(0,0,0,0.06),0_8px_24px_rgba(0,0,0,0.03)] border border-neutral-200/60">
                         {/* Headline */}
                         <div className="text-center mb-12">
-                            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-4 font-geist tracking-tighter">
+                            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-4 font-geist tracking-tighter break-words">
                                 Most AI Projects <span className="text-rose-400/90 font-serif italic">Fail</span>. <span className="text-neutral-900">Yours Won&apos;t.</span>
                             </h1>
                             <p className="text-sm text-neutral-600 font-geist tracking-wide">
@@ -43,10 +43,10 @@ export default function ContactPage() {
 
                         {/* Body Copy */}
                         <div className="mb-12 space-y-6 text-neutral-700 font-geist leading-relaxed">
-                            <p className="text-base">
+                            <p className="text-base break-words">
                                 I build <span className="font-semibold text-neutral-900">production-grade AI automation systems</span> that generate real revenue. My clients&apos; systems have generated <span className="font-semibold text-indigo-600">$2.5M+ in verified revenue</span>.
                             </p>
-                            <p className="text-base">
+                            <p className="text-base break-words">
                                 No black boxes. You own the code, the models, and the competitive advantage.
                             </p>
 
@@ -94,7 +94,7 @@ export default function ContactPage() {
 
                             {/* Testimonial */}
                             <div className="bg-gradient-to-br from-indigo-50/50 to-neutral-100/50 rounded-[16px] p-6 border border-indigo-200/60 italic hover:border-indigo-300 transition-all duration-300">
-                                <p className="text-sm text-neutral-700 mb-3">
+                                <p className="text-sm text-neutral-700 mb-3 break-words">
                                     &ldquo;I was stuck at that dreaded 80% mark on a few vibe coded projects and finding Jin Labs was a total game changer. With their help, I got one project launched almost immediately. I&apos;ve got another, much larger project that they helped me untangle and I&apos;m now moving it into production soon. A huge difference with them was how easy it is to jump on a quick call with Pranamya whenever I hit a wall. They&apos;re quick, sharp, and super supportive.&rdquo;
                                 </p>
                                 <p className="text-xs font-semibold text-indigo-700 not-italic">

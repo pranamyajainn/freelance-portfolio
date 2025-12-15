@@ -23,16 +23,25 @@ export default function CaseStudiesPage() {
                     <ArrowLeft className="h-4 w-4" />
                     <span className="text-sm font-medium font-geist">Back to Home</span>
                 </Link>
-                <h1 className="text-4xl md:text-5xl font-bold text-neutral-900 mb-6 font-geist tracking-tight">AI Lead Systems: Proof of Leverage</h1>
+                <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-neutral-900 mb-6 font-geist tracking-tight break-words">AI Lead Systems: Proof of Leverage</h1>
                 <p className="text-xl text-neutral-600 max-w-2xl font-geist mb-8">See how automated systems replace manual prospecting with controlled, predictable lead generation for brands and agencies.</p>
-                <div className="mb-16">
+                <div className="mb-16 flex flex-wrap gap-4">
                     <Link
                         href="https://cal.com/pranamyajain"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-6 py-3 bg-indigo-600 text-white font-medium rounded-full hover:bg-indigo-700 transition-colors font-geist"
+                        className="inline-flex items-center gap-2 px-6 py-3 bg-indigo-600 text-white font-medium rounded-full hover:bg-indigo-700 transition-colors font-geist shadow-lg shadow-indigo-200 hover:shadow-indigo-300 transform hover:-translate-y-0.5 duration-200"
                     >
                         Discuss Your Automation Needs
+                        <ArrowUpRight className="h-4 w-4" />
+                    </Link>
+                    <Link
+                        href="https://dazzling-lathe-d98.notion.site/Jin-Labs-Portfolio-2aa5937b74418038acc4d853a72a4839"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 px-6 py-3 bg-white text-neutral-600 border border-neutral-200 font-medium rounded-full hover:bg-neutral-50 hover:text-indigo-600 hover:border-indigo-200 transition-all font-geist hover:shadow-md transform hover:-translate-y-0.5 duration-200"
+                    >
+                        Other projects I've built
                         <ArrowUpRight className="h-4 w-4" />
                     </Link>
                 </div>

@@ -90,6 +90,7 @@ export default function ServiceLayout() {
                                 return (
                                     <div
                                         key={card.id}
+                                        id={card.id}
                                         className="relative w-full bg-white border border-neutral-100 rounded-2xl p-5 shadow-md hover:shadow-xl hover:border-indigo-200 transition-all duration-300 hover:-translate-y-1 group overflow-hidden"
                                     >
                                         {/* Subtle gradient overlay for depth */}
@@ -118,12 +119,11 @@ export default function ServiceLayout() {
                                                 )}
                                             </div>
 
-                                            {/* Text Content */}
-                                            <div className="space-y-1 flex-1 text-center sm:text-left">
+                                            <div className="space-y-1 flex-1 text-center sm:text-left break-words">
                                                 <h3 className="text-base md:text-lg font-bold text-gray-900 tracking-tight leading-tight group-hover:text-indigo-700 transition-colors duration-200">
                                                     {card.title}
                                                 </h3>
-                                                <p className="text-neutral-600 text-xs leading-relaxed line-clamp-2">
+                                                <p className="text-neutral-600 text-xs leading-relaxed line-clamp-2 break-words">
                                                     {card.description}
                                                 </p>
                                             </div>

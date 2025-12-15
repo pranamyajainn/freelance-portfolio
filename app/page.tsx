@@ -9,7 +9,7 @@ export default function Home() {
       <Navbar />
 
       {/* Main Container */}
-      <main className="mx-auto max-w-7xl px-4 pb-20 lg:px-8">
+      <main className="mx-auto max-w-7xl px-3 sm:px-4 pb-20 lg:px-8">
         <HeroGrid />
         <Footer />
       </main>
