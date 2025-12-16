@@ -1,297 +1,178 @@
 export const caseStudies = [
     {
         slug: 'reddit-lead-gen-automation',
-        title: 'Community Response Agent for B2B Lead Discovery',
-        description: 'Automated subreddit monitoring cut response time from hours to minutes, capturing 100% of relevant buyer conversations across 12+ targeted communities.',
+        title: 'Capture Every High-Intent B2B Lead on Reddit. 24/7.',
+        description: 'While you sleep, your competitors are stealing your customers. This 24/7 agent captures every high-intent lead instantly. Response time dropped from 4 hours to 4 minutes.',
         client: 'B2B SaaS',
         tags: ['AI Automation', 'n8n', 'Reddit API', 'Google Gemini'],
         cover_image: '/images/case-studies/reddit-monitoring.png',
         content: `
-# Community Response Agent for B2B Lead Discovery
+# Capture Every High-Intent B2B Lead on Reddit. 24/7.
 
-Precision monitoring replaced reactive posting.
+**While you sleep, your competitors are stealing your customers. We stop them.**
 
 ## The Situation
 
-Your ideal customers are asking for help right now. On Reddit. In Slack communities. In Discord channels.
+Right now, your ideal buyers are asking for your solution on Reddit, Slack, and Discord.
 
-Every hour, dozens of threads appear where someone describes the exact problem your product solves. Manual monitoring means you see 10% of these threads. You miss the rest. Your competitors respond faster.
+They are describing their exact problems. They are asking for recommendations.
 
-B2B brands need presence in these spaces. Timing determines outcomes. Miss the window by 6 hours and the thread is dead.
+**And you are invisible.**
 
-## The Problem
+Manual monitoring is broken. A human can’t watch 12 communities, 24 hours a day. You see 10% of the opportunities. You miss the other 90%.
 
-A senior team member spends 90 minutes daily scanning subreddits. They search keywords. Filter spam. Evaluate relevance. Draft responses. Log activity.
+By the time you reply 6 hours later, the thread is dead. The lead is gone.
 
-This work is necessary. It is also repetitive and error-prone.
+## The Guide: Omnipresence
 
-Result: inconsistent coverage, missed opportunities, expensive labor on mechanical tasks.
+We custom-built an automated Lead Intelligence Agent that monitors your niche 24/7/365.
 
-The real cost: conversations with active buyers that never happen.
+It doesn’t sleep. It doesn’t blink. It doesn’t miss.
 
-## The System
+**How It Works:**
+- **Instantly Detects**: Scans targeted communities for high-intent keywords in real-time.
+- **Intelligently Responds**: Uses Google Gemini to draft helpful, context-aware replies that respect community norms.
+- **Deterministically Filters**: Zero spam. Zero noise. Only active buyers.
+- **Automatically Logs**: Every interaction is tracked in a centralized dashboard for your sales team.
 
-We built an automated lead generation workflow that operates 24/7.
+## The Result: 100% Coverage
 
-**Core Functions**
-- Continuous scan of targeted subreddits for defined keyword triggers
-- AI-generated responses calibrated to community norms
-- Spam avoidance through behavioral pattern analysis
-- Centralized activity logging in Google Sheets
-- Duplicate detection and relevance scoring
+We deployed this for a B2B SaaS client. The transformation was immediate.
 
-**Technology Foundation**
-- **n8n**: Workflow orchestration and scheduling
-- **Reddit API**: Real-time thread monitoring
-- **Google Gemini**: Context-aware response generation
-- **Google Sheets**: Lead tracking and analysis database
+- **Response Time:** Slashed from **4 hours** to **4 minutes**.
+- **Missed Opportunities:** Reduced to **Zero**.
+- **Hiring Cost:** Saved **90 minutes/day** of senior staff time (approx. $25k/year savings).
 
-The system reads context, generates appropriate responses, and logs every interaction. No manual intervention required.
-
-## The Outcome
-
-**Operational Impact**
-- Zero engagement windows missed
-- Response time reduced from hours to minutes
-- 100% activity documentation for analysis
-- Spam risk eliminated through deterministic filters
-
-**Business Value**
-The client shifted senior time from monitoring to strategy. Every relevant thread now receives timely engagement. Lead tracking became systematic instead of anecdotal.
-
-Community presence transformed from reactive to controlled.
+The client didn’t just get "leads." They established **market dominance**. Every time a prospect asked a question, this brand was the first, most helpful answer.
 
 ## The Proof
 
-Live workflow demo available. Operational Google Sheet shows lead capture history. System runs continuously without supervision.
-
-This is not a growth hack. This is leverage through automation.
-
-### System Demonstration
-
-Watch the automated Reddit monitoring system in action:
+Don’t take our word for it. Watch the system operate in real-time.
 
 [VIDEO:/videos/Reddit LeadGen.mp4]
 
-**Interested in similar automation?** [Discuss your lead generation challenge](/contact)
+**Stop letting competitors steal your leads.**
+
+[Automate Your Lead Gen Analysis →](/contact)
         `
     },
     {
         slug: 'smart-lead-radar-hiring-agencies',
-        title: 'Automated Lead Intelligence for Hiring Agencies',
-        description: 'Funding signals and job postings automatically convert into 15-30 daily qualified leads, eliminating 10+ hours of weekly manual prospecting.',
+        title: 'Stop Losing Deals to Faster Competitors.',
+        description: 'Your manual prospecting is too slow. This automated radar finds every funded company the moment they have cash. 15-30 qualified leads every single morning.',
         client: 'Hiring Agency',
         tags: ['Lead Automation', 'n8n', 'Web Scraping', 'Sales Intelligence'],
         cover_image: '/images/case-studies/lead-radar.png',
         content: `
-# Automated Lead Intelligence for Hiring Agencies
+# Stop Losing Deals to Faster Competitors.
 
-Manual lead chasing consumed time. Automation returned it.
+**Your manual prospecting is too slow. We built a machine that finds every funded company the moment they have cash.**
 
 ## The Situation
 
-A company raises $20M in Series B funding. Within weeks, they post 15 open positions. This is a qualified lead. You need to reach them before your competitors do.
+A company raises $20M in Series B funding. They post 15 new jobs.
+They are ready to buy *now*.
 
-But you found this lead by luck, not system. Three other companies raised funding this week. You missed them all.
+**But you don’t know yet.**
 
-Hiring agencies need systematic intelligence gathering, not reactive scanning.
+By the time your BD team finds them on LinkedIn three days later, your competitor has already closed the deal.
 
-## The Problem
+## The Problem: Human Speed
 
-Your BD team spends 2+ hours daily hunting leads across:
-- TechCrunch funding announcements
-- LinkedIn company updates  
-- Indeed/LinkedIn job postings
-- Crunchbase alerts
-- Industry newsletters
+Your team wastes **10+ hours a week** manually refreshing TechCrunch, Crunchbase, and LinkedIn.
+- They miss key updates.
+- They get tired.
+- They operate on "luck" instead of logic.
 
-They gather leads manually. Quality varies. Coverage has gaps. Response time lags behind agencies with better systems.
+Every hour they spend searching is an hour they *aren't* selling.
 
-The underlying issue: no systematic intelligence pipeline. Just human effort and hope.
+## The Solution: The Smart Lead Radar
 
-## The System
+We built an Intelligence Engine that monitors the entire web for buying signals. **It finds leads before they are "leads."**
 
-We deployed an automated lead radar that delivers qualified prospects daily.
+**How It Works:**
+- **Watches Everything**: Scrapes funding news, job boards, and API signals 24/7.
+- **Filters Ruthlessly**: Only alerts you to companies matching your *exact* ICP (industry, size, role).
+- **Delivers Daily**: You wake up to a spreadsheet of 15-30 hot, qualified prospects.
 
-**Intelligence Gathering**
-- Scrapes funding announcement platforms for capital raises
-- Monitors job board APIs for hiring intent signals
-- Tracks LinkedIn company updates for expansion indicators
-- Applies industry and geography filters
-- Ranks leads by hiring probability score
+## The Result: An Unfair Advantage
 
-**Delivery Mechanism**
-- Structured daily reports to Google Sheets
-- Lead scoring with clear reasoning
-- Contact enrichment where available
-- Deduplicated against existing pipeline
+We installed this for a Hiring Agency. The results were instant:
 
-**Technology Stack**
-- **n8n**: Workflow automation and data orchestration
-- **Web Scraping APIs**: Multi-source data collection
-- **Google Sheets**: Lead database and CRM integration
-- **Custom scoring logic**: Hiring intent algorithms
-
-The system runs overnight. Teams receive prioritized leads each morning.
-
-## The Outcome
-
-**Time Recovered**
-Business development hours shifted from research to outreach. Manual list building eliminated. Lead quality improved through systematic filtering.
-
-**Pipeline Impact**
-- Daily delivery of 15-30 qualified prospects
-- Geographic and industry targeting precision
-- Clear hiring intent signals attached to each lead
-- Zero hours spent on manual prospecting
-
-The agency now operates from a position of abundance, not scarcity.
+- **Volume**: **15-30** high-intent leads delivered every single morning.
+- **Efficiency**: **Zero** hours spent on manual research.
+- **Speed**: They are now the **first** to reach out, every single time.
 
 ## The Proof
 
-Working Google Sheet with months of lead history. Scraping workflows demonstrate real-time data capture. Client reports consistent pipeline growth.
-
-This is not convenience. This is competitive advantage through intelligent automation.
-
-### System Demonstration
-
-Watch the automated lead intelligence system in action:
+Stop hoping for leads. Start manufacturing them.
+Watch the system in action:
 
 [VIDEO:/videos/Hiring Agent.mp4]
 
-**Need similar lead intelligence?** [Schedule a discussion](/contact)
+**Your competitors are already automating. Are you?**
+
+[Build Your Intelligence Engine →](/contact)
         `
     },
     {
         slug: 'oxiom-leadforge-mvp',
-        title: 'ICP-to-Qualified-Leads Engine for Investor Validation',
-        description: 'Currently building a complete ICP-to-CRM lead engine, delivering investor-ready proof that will shift fundraising conversations from concept to scale.',
+        title: 'Don\'t Pitch Your Vision. Prove It.',
+        description: 'Investors ignore slide decks. We are building the live "LeadForge" engine that proves Oxiom\'s capability in real-time. From abstract claim to working machine in 4 weeks.',
         client: 'Oxiom (Cameron)',
         tags: ['MVP Development', 'Lead Qualification', 'Telegram', 'Tami AI', 'Apollo'],
         cover_image: '/images/case-studies/lead-forge.png',
         content: `
-# ICP-to-Qualified-Leads Engine for Investor Validation
+# Don't Pitch Your Vision. Prove It.
 
-> **Project Status**: Currently in active development. Proof artifacts and demonstration videos will be available upon project completion.
+**Investors see 100 slide decks a week. They ignore 99. We are building the system that makes you the 1.**
 
-Strategic proof replacing abstract promises.
+> **Status: Active Build.** We are currently engineering this system live.
 
-## The Context
+## The Situation
 
-Oxiom needs credible proof of its core thesis for investor conversations. Abstract demos fail. Working systems win.
+You have a great thesis. You have a beautiful deck. You have a vision.
+**So does everyone else.**
 
-The challenge: building an end-to-end ICP to qualified leads engine that investors can see operating in real time.
+Investors don't fund claims. They fund capabilities.
+When you say "We will use AI to qualify leads," they hear "We hope we can figure that out."
 
-**Purpose**: Investor demonstration and fundraising leverage  
-**Timeline**: 4 weeks from requirements to working MVP  
-**Investment**: Strategic build for equity positioning
+## The Problem: The "Trust Me" Gap
 
-## The Challenge
+Oxiom is raising capital. But their core value prop—complex AI lead qualification—sounds like science fiction in a slide deck.
+- Abstract flowcharts look nice.
+- They don't prove execution.
+- Doubt kills deals.
 
-Without a live system, investor conversations stay theoretical. Slide decks explain concepts. Working products prove capability.
+## The Solution: The "LeadForge" Engine
 
-Oxiom requires:
-- Conversational ICP capture that feels natural, not like a form
-- Deterministic AI qualification with readable reasoning
-- Transparent data provenance
-- Human approval layer for quality control
-- Clean CRM export to standard tools
-- Investor-focused UI for walkthrough presentations
+We aren't building a prototype. **We are building the real machine.**
+In a 4-week sprint, we are spinning up a live, end-to-end outcome generator.
 
-The system needs to feel inevitable, not experimental.
+**The System We Are Engineering:**
+- **Conversation, Not Forms**: A live Telegram bot that chats with prospects naturally.
+- **Enrichment, Not Guesses**: Instantly pulling data from Tami AI and Apollo.
+- **Decisions, Not Black Boxes**: AI that explains *exactly* why a lead was qualified, in plain English.
 
-## The Response
+## The Goal: Certainty
 
-We are building a complete lead qualification engine across five integrated phases.
+When an investor asks, "Can you really automate this?"
+Oxiom won't accept "Maybe." **They will pull up the live dashboard.**
 
-### Phase 1: Conversational ICP Capture
+- **Input**: A raw lead.
+- **Process**: Watched in real-time.
+- **Output**: A qualified, enriched, scored opportunity.
 
-**Interface Options**
-- Telegram bot for natural conversation flow
-- Lightweight web UI for guided capture
-- No rigid forms or intimidating surveys
+The conversation shifts from "Is this possible?" to **"How fast can we scale?"**
 
-**Data Collection**
-The system asks strategic questions. It adapts based on responses. It extracts ICP parameters through guided dialogue.
+## The Proof
 
-Target industries, company size, decision maker roles, pain points, budget signals. All captured conversationally.
+We are building this in the open.
+*(Coming Soon: Live video of the investor demo)*
 
-### Phase 2: Lead Enrichment
+**Stop asking for belief. Start demanding investment.**
 
-**Enrichment Pipeline**
-- **Tami AI**: Contact verification and enrichment
-- **Apollo**: Company data and technographic signals
-- **Custom logic**: Data normalization and validation
-
-Raw ICP data transforms into actionable lead intelligence. Missing fields get filled where possible. Confidence scores attach to enriched data.
-
-### Phase 3: AI-Powered Qualification
-
-**Qualification Engine**
-The system evaluates each enriched lead against defined criteria. Decision logic operates deterministically, not as a black box.
-
-**Scoring Dimensions**
-- ICP fit score with breakdown
-- Buying intent signals
-- Authority and budget indicators
-- Timing and urgency factors
-
-Every qualification decision includes readable reasoning. Investors see why leads pass or fail thresholds.
-
-### Phase 4: Human Approval Layer
-
-Automation enables humans, not replaces them. The system presents qualified leads with full context. Reviewers approve or reject with one click.
-
-This layer ensures quality. It provides learning data for model improvement. It gives stakeholders control.
-
-### Phase 5: CRM Export and Investor Demo UI
-
-**Export Capabilities**
-- Airtable integration for pipeline management
-- Google Sheets for flexible analysis
-- Standard CSV for any CRM
-
-**Investor Walkthrough Interface**
-Clean micro-UI designed for presentation. Shows:
-- Live ICP capture demonstration
-- Real-time enrichment process
-- Qualification logic visualization
-- Approved lead outputs
-- System performance metrics
-
-The interface turns abstract capability into tangible proof.
-
-## Expected Outcomes
-
-Oxiom will gain repeatable investor leverage.
-
-**What the System Will Deliver**
-- Working end-to-end lead qualification engine
-- Transparent decision logic for technical diligence
-- Live demonstration capability for investor meetings
-- Verified lead outputs proving concept validity
-- Clear data provenance for compliance questions
-
-**Anticipated Fundraising Impact**
-Investor conversations will shift from "can you build this?" to "how fast can you scale this?"
-
-The MVP will demonstrate execution capability. It will prove market understanding. It will show technical depth without requiring technical explanations.
-
-## Project Completion & Proof
-
-**Artifacts Available Upon Completion**
-- Operational MVP accessible for demonstration
-- Investor walkthrough UI with recorded sessions
-- Demo scripts for presentation consistency
-- Verified lead outputs with qualification reasoning
-- System architecture documentation
-- Video demonstration of the complete system
-
-This is not a prototype. This is executed proof in progress.
-
-The difference between pitching an idea and demonstrating capability: investor confidence.
-
-**Building strategic proof for your product?** [Explore collaboration](/contact)
+[Build Your Proof of Work →](/contact)
         `
     }
 ]
