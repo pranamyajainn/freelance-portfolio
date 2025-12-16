@@ -61,16 +61,23 @@ export async function submitLead(prevState: FormState, formData: FormData): Prom
     }
 
     // 2. Send Email via Resend (if configured)
-    if (resendApiKey) {
-        const resend = new Resend(resendApiKey)
-        const contactEmail = process.env.CONTACT_EMAIL || 'onboarding@resend.dev'
+    if (!process.env.RESEND_API_KEY) {
+        throw new Error("RESEND_API_KEY missing in production");
+    }
 
-        try {
-            await resend.emails.send({
-                from: 'Portfolio Contact <onboarding@resend.dev>',
-                to: contactEmail,
-                subject: `New Lead: ${name}`,
-                html: `
+    if (!process.env.CONTACT_EMAIL) {
+        throw new Error("CONTACT_EMAIL missing in production");
+    }
+
+    const resend = new Resend(process.env.RESEND_API_KEY);
+    const contactEmail = process.env.CONTACT_EMAIL;
+
+    try {
+        await resend.emails.send({
+            from: 'Portfolio Contact <onboarding@resend.dev>',
+            to: contactEmail,
+            subject: `New Lead: ${name}`,
+            html: `
           <h3>New Lead Submission</h3>
           <p><strong>Name:</strong> ${name}</p>
           <p><strong>Email:</strong> ${email}</p>
@@ -78,18 +85,14 @@ export async function submitLead(prevState: FormState, formData: FormData): Prom
           <p><strong>Message:</strong></p>
           <p>${message}</p>
         `,
-            })
-        } catch (e) {
-            console.error('Resend Error:', e)
-            // If both fail, we should probably return an error.
-        }
+        })
+    } catch (e) {
+        console.error('Resend Error:', e)
+        // If both fail, we should probably return an error.
     }
 
-    // If no env vars are set, we simulate success for demo purposes
-    if (!supabaseUrl && !resendApiKey) {
-        console.log("Mock Submission:", { name, email, company, message })
-        return { success: true, message: 'Message sent! (Mock mode - configure .env to save)' }
-    }
+
+
 
     return {
         success: true,
