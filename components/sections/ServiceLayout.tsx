@@ -1,12 +1,11 @@
 import { socialLinks, allServiceCards } from '@/data/services';
-import { Linkedin, Github, Twitter, ArrowLeft, Zap, Bot, Rocket, Video } from 'lucide-react';
+import { Linkedin, Github, ArrowLeft, Zap, Bot, Rocket, Video } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 import Navbar from '@/components/layout/Navbar';
 
 const socialIcons: Record<string, React.ComponentType<{ className?: string }>> = {
     linkedin: Linkedin,
-    twitter: Twitter,
     github: Github,
 };
 

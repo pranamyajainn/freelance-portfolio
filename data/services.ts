@@ -227,11 +227,6 @@ export const socialLinks = [
         icon: 'linkedin',
     },
     {
-        name: 'Twitter',
-        href: 'https://twitter.com/pranamyajain',
-        icon: 'twitter',
-    },
-    {
         name: 'GitHub',
         href: 'https://github.com/pranamyajainn',
         icon: 'github',

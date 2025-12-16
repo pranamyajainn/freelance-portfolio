@@ -1,4 +1,4 @@
-import { Linkedin, Twitter } from 'lucide-react';
+import { Linkedin } from 'lucide-react';
 import Link from 'next/link';
 
 export default function Footer() {
@@ -21,14 +21,14 @@ export default function Footer() {
                         </ul>
                     </div>
                     <div>
-                        <h5 className="text-sm font-semibold mb-4 tracking-tight font-geist">Company</h5>
+                        <h5 className="text-sm font-semibold mb-4 tracking-tight font-geist">Explore</h5>
                         <ul className="space-y-3 text-sm text-neutral-500 font-medium">
                             <li><Link href="/case-studies" className="hover:text-indigo-600 transition-colors duration-200">Case Studies</Link></li>
                             <li><Link href="/contact" className="hover:text-indigo-600 transition-colors duration-200">Contact</Link></li>
                         </ul>
                     </div>
                     <div>
-                        <h5 className="text-sm font-semibold mb-4 tracking-tight font-geist">Follow Us</h5>
+                        <h5 className="text-sm font-semibold mb-4 tracking-tight font-geist">Connect</h5>
                         <div className="flex space-x-4">
                             <a href="https://www.linkedin.com/in/pranamya-jainn/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-neutral-400 hover:text-indigo-600 transition-all duration-200 hover:scale-110">
                                 <Linkedin className="w-5 h-5" />

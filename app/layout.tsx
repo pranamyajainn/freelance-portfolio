@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Inter } from "next/font/google"; // Added Inter
 import "./globals.css";
+import SmoothScroll from "@/components/ui/SmoothScroll";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,7 +27,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://pranamyajain.com",
+    url: "https://pranamya.tech",
     title: "Pranamya Jain - Applied AI Solutions",
     description: "Crafting Clarity-First AI solutions for Human-Centric Workflows Worldwide",
     siteName: "Pranamya Jain Portfolio",
@@ -38,12 +39,6 @@ export const metadata: Metadata = {
         alt: "Pranamya Jain - Applied AI Solutions",
       },
     ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Pranamya Jain - Applied AI Solutions",
-    description: "Crafting Clarity-First AI solutions for Human-Centric Workflows Worldwide",
-    images: ["/pranamya-hero-bg.jpg"],
   },
   robots: {
     index: true,
@@ -80,6 +75,7 @@ export default function RootLayout({
             sandbox="allow-scripts allow-same-origin"
           />
         </div>
+        <SmoothScroll />
         {children}
       </body>
     </html>
