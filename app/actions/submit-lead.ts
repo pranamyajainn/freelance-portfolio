@@ -91,11 +91,11 @@ export async function submitLead(prevState: FormState, formData: FormData): Prom
             console.error('Resend returned error object:', data.error);
             throw new Error(`Resend API Error: ${data.error.message}`);
         }
-    } catch (e) {
+    } catch (e: any) {
         console.error('Resend Error:', e)
         return {
             success: false,
-            message: 'Failed to send email. Please try again.',
+            message: `Failed to send email: ${e.message || 'Unknown error'}`,
         }
     }
     return {
