@@ -70,7 +70,7 @@ export async function submitLead(prevState: FormState, formData: FormData): Prom
     }
 
     const resend = new Resend(process.env.RESEND_API_KEY);
-    const contactEmail = process.env.CONTACT_EMAIL;
+    const contactEmail = process.env.CONTACT_EMAIL!.trim();
 
     try {
         const data = await resend.emails.send({
