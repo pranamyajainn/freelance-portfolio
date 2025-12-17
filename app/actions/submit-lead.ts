@@ -88,7 +88,10 @@ export async function submitLead(prevState: FormState, formData: FormData): Prom
         })
     } catch (e) {
         console.error('Resend Error:', e)
-        // If both fail, we should probably return an error.
+        return {
+            success: false,
+            message: 'Failed to send email. Please try again.',
+        }
     }
     return {
         success: true,
