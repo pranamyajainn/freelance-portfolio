@@ -74,7 +74,7 @@ export async function submitLead(prevState: FormState, formData: FormData): Prom
 
     try {
         await resend.emails.send({
-            from: 'Portfolio Contact <onboarding@resend.dev>',
+            from: 'Pranamya Portfolio <contact@pranamya.tech>',
             to: contactEmail,
             subject: `New Lead: ${name}`,
             html: `
@@ -90,10 +90,6 @@ export async function submitLead(prevState: FormState, formData: FormData): Prom
         console.error('Resend Error:', e)
         // If both fail, we should probably return an error.
     }
-
-
-
-
     return {
         success: true,
         message: 'Message sent successfully!',
