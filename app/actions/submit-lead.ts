@@ -73,7 +73,7 @@ export async function submitLead(prevState: FormState, formData: FormData): Prom
     const contactEmail = process.env.CONTACT_EMAIL;
 
     try {
-        await resend.emails.send({
+        const data = await resend.emails.send({
             from: 'Pranamya Portfolio <contact@pranamya.tech>',
             to: contactEmail,
             subject: `New Lead: ${name}`,
@@ -86,6 +86,11 @@ export async function submitLead(prevState: FormState, formData: FormData): Prom
           <p>${message}</p>
         `,
         })
+
+        if (data.error) {
+            console.error('Resend returned error object:', data.error);
+            throw new Error(`Resend API Error: ${data.error.message}`);
+        }
     } catch (e) {
         console.error('Resend Error:', e)
         return {
