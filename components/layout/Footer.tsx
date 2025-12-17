@@ -1,4 +1,4 @@
-import { Linkedin } from 'lucide-react';
+import { Linkedin, Mail } from 'lucide-react';
 import Link from 'next/link';
 
 export default function Footer() {
@@ -32,6 +32,9 @@ export default function Footer() {
                         <div className="flex space-x-4">
                             <a href="https://www.linkedin.com/in/pranamya-jainn/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-neutral-400 hover:text-indigo-600 transition-all duration-200 hover:scale-110">
                                 <Linkedin className="w-5 h-5" />
+                            </a>
+                            <a href="mailto:contact@pranamya.tech" aria-label="Email" className="text-neutral-400 hover:text-indigo-600 transition-all duration-200 hover:scale-110">
+                                <Mail className="w-5 h-5" />
                             </a>
                         </div>
                     </div>

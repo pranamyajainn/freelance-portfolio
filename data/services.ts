@@ -231,6 +231,11 @@ export const socialLinks = [
         href: 'https://github.com/pranamyajainn',
         icon: 'github',
     },
+    {
+        name: 'Email',
+        href: 'mailto:contact@pranamya.tech',
+        icon: 'mail',
+    },
 ];
 
 export function getServiceBySlug(slug: string): Service | undefined {

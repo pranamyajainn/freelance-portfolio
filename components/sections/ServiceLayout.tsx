@@ -1,5 +1,5 @@
 import { socialLinks, allServiceCards } from '@/data/services';
-import { Linkedin, Github, ArrowLeft, Zap, Bot, Rocket, Video } from 'lucide-react';
+import { Linkedin, Github, ArrowLeft, Zap, Bot, Rocket, Video, Mail } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 import Navbar from '@/components/layout/Navbar';
@@ -7,6 +7,7 @@ import Navbar from '@/components/layout/Navbar';
 const socialIcons: Record<string, React.ComponentType<{ className?: string }>> = {
     linkedin: Linkedin,
     github: Github,
+    mail: Mail,
 };
 
 const serviceIcons = {
