@@ -28,7 +28,7 @@ const nextConfig: NextConfig = {
           },
         ],
         destination: 'https://pranamya.tech/:path*',
-        statusCode: 301,
+        permanent: true,
       },
     ];
   },
