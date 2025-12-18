@@ -17,6 +17,21 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'www.pranamya.tech',
+          },
+        ],
+        destination: 'https://pranamya.tech/:path*',
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {

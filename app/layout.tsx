@@ -19,6 +19,10 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://pranamya.tech"),
+  alternates: {
+    canonical: "/",
+  },
   title: "Pranamya Jain - Applied AI Solutions | Creative Portfolio",
   description: "Crafting Clarity-First AI solutions for Human-Centric Workflows Worldwide. Specializing in GenAI, RAG pipelines, and AI automation.",
   keywords: ["Applied AI", "GenAI", "AI Consulting", "AI Automation", "RAG Pipelines", "ComfyUI", "n8n", "AI Solutions", "Machine Learning", "Pranamya Jain"],
