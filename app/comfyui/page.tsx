@@ -1,6 +1,5 @@
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-import OrbitalWrapper from "@/components/ui/OrbitalWrapper";
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 
@@ -8,188 +7,201 @@ export default function ComfyUIPage() {
     return (
         <>
             <Navbar />
-            <main className="font-geist text-gray-900 bg-white selection:bg-indigo-100 selection:text-indigo-900">
+            <main className="font-geist text-gray-900 bg-white selection:bg-indigo-50 selection:text-indigo-900 pb-24">
 
-                {/* --- HERO SECTION --- 
-            Design: Consistent with site aesthetic (rounded corners, subtle gradients).
-            Image: Used as structural background.
-        */}
-                <section className="relative px-4 pt-10 pb-20 md:pt-20 md:pb-32 overflow-hidden">
-                    {/* Background Anchor */}
-                    <div className="absolute top-0 left-0 w-full h-[800px] z-0 opacity-[0.08] pointer-events-none">
-                        <Image
-                            src="/images/comfyui-hero.png"
-                            alt=""
-                            fill
-                            className="object-cover object-top"
-                            priority
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-b from-white via-transparent to-white"></div>
-                    </div>
+                {/* --- HERO SECTION: Pure Typography & Flow --- */}
+                <section className="mx-auto max-w-7xl px-3 sm:px-4 pt-20 pb-20 lg:px-8 relative">
 
-                    <div className="relative z-10 mx-auto max-w-7xl">
-                        <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter text-gray-900 mb-8 leading-[0.95]">
-                            Production-Grade <br />
-                            ComfyUI Pipelines. <br />
-                            <span className="text-indigo-600">Built for Scale.</span>
+                    {/* Text First Approach */}
+                    <div className="relative z-10 w-full md:max-w-lg">
+                        <h1 className="flex flex-col items-start leading-[0.9] text-gray-900 mb-10">
+                            <span className="text-6xl md:text-8xl font-medium tracking-tighter">ComfyUI.</span>
+                            <span className="text-6xl md:text-8xl font-black tracking-tighter mt-2 text-indigo-600">Production Grade.</span>
                         </h1>
-
-                        <div className="max-w-3xl mt-12 mb-12">
-                            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 tracking-tight">
-                                Stop wiring nodes. Start deploying systems.
-                            </h2>
-                            <p className="text-lg md:text-xl text-neutral-600 leading-relaxed font-medium">
-                                You have a workflow that generates incredible results on your local machine. But a <code className="bg-neutral-100 px-1.5 py-0.5 rounded-md text-sm font-mono text-indigo-700 font-bold border border-neutral-200">.json</code> file is not a product. To build a business, you need stable APIs, sub-second latency, and the ability to handle concurrent traffic without crashing.
-                            </p>
-                            <p className="text-lg md:text-xl text-neutral-600 leading-relaxed font-medium mt-6">
-                                We transform experimental workflows into robust, revenue-generating infrastructure.
-                            </p>
-                        </div>
-
-                        <div className="flex items-center gap-4">
+                        <p className="text-xl md:text-2xl text-neutral-500 font-medium max-w-2xl leading-tight tracking-tight mt-6">
+                            <span className="text-gray-900 font-bold">Specialized Engineering Services.</span> I engineer robust, versioned, and scalable ComfyUI backends for high-growth teams. Stop shipping screenshots; start shipping systems.
+                        </p>
+                        <div className="mt-12 flex items-center">
                             <a
                                 href="#audit"
-                                className="group inline-flex items-center gap-2 text-indigo-600 font-bold text-lg hover:text-indigo-700 transition-colors"
+                                className="inline-flex items-center gap-4 bg-gray-900 text-white px-10 py-5 rounded-lg font-bold text-sm tracking-widest uppercase hover:bg-indigo-600 transition-colors duration-300 shadow-xl"
                             >
-                                <span className="border-b-2 border-indigo-600/30 group-hover:border-indigo-600 transition-all">Initialize System Audit</span>
-                                <ArrowUpRight className="w-5 h-5 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-transform" />
+                                Start Technical Audit
+                                <ArrowUpRight className="w-5 h-5" />
                             </a>
                         </div>
                     </div>
-                </section>
 
-                {/* --- CAPABILITIES GRID --- 
-            Design: Reverting to rounded-3xl/2xl cards to match HeroGrid and ServiceLayout.
-            Interaction: Standard hover states, no layout shifts or image reveals for consistency.
-        */}
-                <section className="py-24 px-4 bg-neutral-50 border-y border-neutral-100">
-                    <div className="mx-auto max-w-7xl">
-                        <div className="grid md:grid-cols-3 gap-6">
-
-                            {/* Custom Node Engineering */}
-                            <div className="bg-white rounded-3xl border border-neutral-200 p-8 shadow-sm hover:shadow-md hover:border-indigo-200 transition-all duration-300">
-                                <div className="mb-6">
-                                    <Image
-                                        src="/images/icon-nodes-3d.png"
-                                        alt="Custom Python Nodes"
-                                        width={80}
-                                        height={80}
-                                        className="object-contain"
-                                    />
-                                </div>
-                                <h3 className="text-xl font-black mb-4 tracking-tight text-gray-900">1. Custom Node Engineering</h3>
-                                <p className="text-neutral-600 leading-relaxed text-sm">
-                                    We do not rely on fragile spaghetti graphs. We write custom Python extensions (<code className="bg-neutral-100 px-1 py-0.5 rounded text-xs font-mono font-bold">__init__.py</code>) to encapsulate your proprietary business logic. We handle complex data types, error catching, and tensor shape management at the code level.
-                                </p>
-                            </div>
-
-                            {/* Serverless Auto-Scaling */}
-                            <div className="bg-white rounded-3xl border border-neutral-200 p-8 shadow-sm hover:shadow-md hover:border-indigo-200 transition-all duration-300">
-                                <div className="mb-6">
-                                    <Image
-                                        src="/images/icon-scale-3d.png"
-                                        alt="Serverless Scaling"
-                                        width={80}
-                                        height={80}
-                                        className="object-contain"
-                                    />
-                                </div>
-                                <h3 className="text-xl font-black mb-4 tracking-tight text-gray-900">2. Serverless Auto-Scaling</h3>
-                                <p className="text-neutral-600 leading-relaxed text-sm">
-                                    Your pipeline must survive the real world. We architect deployment environments on RunPod, Modal, or AWS EC2 g5 instances. We implement aggressive model caching, queue management, and cold-start mitigation strategies.
-                                </p>
-                            </div>
-
-                            {/* API-First Architecture */}
-                            <div className="bg-white rounded-3xl border border-neutral-200 p-8 shadow-sm hover:shadow-md hover:border-indigo-200 transition-all duration-300">
-                                <div className="mb-6">
-                                    <Image
-                                        src="/images/icon-api-3d.png"
-                                        alt="API Stack"
-                                        width={80}
-                                        height={80}
-                                        className="object-contain"
-                                    />
-                                </div>
-                                <h3 className="text-xl font-black mb-4 tracking-tight text-gray-900">3. API-First Architecture</h3>
-                                <p className="text-neutral-600 leading-relaxed text-sm">
-                                    We deliver more than a workflow. We deliver a documented, type-safe API (REST or WebSocket) ready for immediate consumption by your React, Next.js, or mobile application. Zero "glue code" required from your team.
-                                </p>
-                            </div>
-
+                    {/* The Continuous System Visual - Absolute & Flowing */}
+                    <div className="absolute top-0 right-0 w-[50%] h-full -z-0 pointer-events-none hidden md:block rounded-l-[2.5rem] overflow-hidden">
+                        <div className="relative w-full h-full">
+                            <Image
+                                src="/images/comfyui-continuous-flow.png"
+                                alt="Continuous Engineered System"
+                                fill
+                                className="object-cover object-left opacity-90 mix-blend-multiply mask-image-linear-to-l"
+                                priority
+                            />
                         </div>
                     </div>
                 </section>
 
-                {/* --- THE FILTER --- 
-            Design: Simplified "Stats Grid" (removed Terminal aesthetic).
-            Context: Matches the 'Stats Card' from HeroGrid.tsx but expanded.
-        */}
-                <section className="py-24 px-4 bg-white">
-                    <div className="mx-auto max-w-7xl">
+                {/* --- TRAP vs FIX: Soft Panels (No Boxes) --- */}
+                <section className="mx-auto max-w-7xl px-3 sm:px-4 pb-24 lg:px-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 
-                        <h3 className="text-4xl md:text-5xl font-black mb-12 tracking-tight text-gray-900">The Filter.</h3>
-                        <p className="text-xl text-neutral-500 font-medium leading-relaxed max-w-2xl mb-16">
-                            This service is not for hobbyists. It is for founders building high-volume generative applications.
-                        </p>
-
-                        <div className="grid md:grid-cols-3 gap-12 border-t border-neutral-100 pt-12">
-                            <div className="flex flex-col gap-2">
-                                <span className="text-6xl font-black text-gray-900 tracking-tighter">$2.5M+</span>
-                                <div className="h-1 w-12 bg-indigo-600 rounded-full mb-2"></div>
-                                <span className="text-xs font-bold text-neutral-500 uppercase tracking-widest">Verified Revenue</span>
-                                <p className="text-neutral-600 text-sm font-medium mt-2">Generated directly through custom generative pipelines for clients.</p>
-                            </div>
-
-                            <div className="flex flex-col gap-2">
-                                <span className="text-6xl font-black text-gray-900 tracking-tighter">Sub-1s</span>
-                                <div className="h-1 w-12 bg-indigo-600 rounded-full mb-2"></div>
-                                <span className="text-xs font-bold text-neutral-500 uppercase tracking-widest">Inference Latency</span>
-                                <p className="text-neutral-600 text-sm font-medium mt-2">Achieved via TensorRT optimization and custom schedulers.</p>
-                            </div>
-
-                            <div className="flex flex-col gap-2">
-                                <span className="text-6xl font-black text-gray-900 tracking-tighter">100%</span>
-                                <div className="h-1 w-12 bg-indigo-600 rounded-full mb-2"></div>
-                                <span className="text-xs font-bold text-neutral-500 uppercase tracking-widest">IP Ownership</span>
-                                <p className="text-neutral-600 text-sm font-medium mt-2">You own the custom nodes, the container config, and the API wrapper. No block boxes.</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                {/* --- CTA SECTION --- 
-            Design: Clean OrbitalWrapper usage. Consistent with contact page premium feel.
-        */}
-                <section id="audit" className="pb-32 px-4 bg-white">
-                    <div className="mx-auto max-w-4xl pt-12">
-                        <div className="relative rounded-[2.5rem] overflow-hidden border border-neutral-100 shadow-2xl shadow-indigo-100/50">
-                            <OrbitalWrapper>
-                                <div className="bg-white/80 backdrop-blur-xl p-12 md:p-20 text-center relative z-10">
-                                    <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6 tracking-tight">
-                                        Book Technical Audit
-                                    </h2>
-
-                                    <p className="text-lg text-neutral-500 mb-10 font-medium max-w-lg mx-auto">
-                                        Stop losing leads to latency. Talk to a Systems Engineer, not a salesperson.
-                                    </p>
-
-                                    <a
-                                        href="https://cal.com/pranamyajain"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="inline-flex items-center justify-center h-16 px-10 rounded-full bg-gray-900 text-white font-bold text-sm tracking-widest uppercase hover:bg-gray-800 hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
-                                    >
-                                        Execute booking
-                                        <ArrowUpRight className="ml-3 w-4 h-4" />
-                                    </a>
+                        {/* The Trap - Soft Darker Panel */}
+                        <div className="bg-neutral-50 rounded-[2.5rem] p-12 md:p-16">
+                            <h3 className="text-rose-600 text-sm font-bold uppercase tracking-widest mb-8">The Reality Check</h3>
+                            <p className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
+                                Your workflow is a ticking time bomb.
+                            </p>
+                            <div className="space-y-6">
+                                <div>
+                                    <strong className="block text-gray-900 text-xl mb-1">JSON is not code.</strong>
+                                    <p className="text-lg font-medium text-neutral-500">It’s a prototype that collapses under specific user load.</p>
                                 </div>
-                            </OrbitalWrapper>
+                                <div>
+                                    <strong className="block text-gray-900 text-xl mb-1">Zero IP Protection.</strong>
+                                    <p className="text-lg font-medium text-neutral-500">If you can't deploy it as a binary, anyone can steal it.</p>
+                                </div>
+                                <div>
+                                    <strong className="block text-gray-900 text-xl mb-1">Update Hell.</strong>
+                                    <p className="text-lg font-medium text-neutral-500">One custom node updates, and your entire product goes offline.</p>
+                                </div>
+                            </div>
                         </div>
+
+                        {/* The Fix - Soft Lighter Panel */}
+                        <div className="bg-indigo-50/30 rounded-[2.5rem] p-12 md:p-16">
+                            <h3 className="text-indigo-600 text-sm font-bold uppercase tracking-widest mb-8">The Solution</h3>
+                            <p className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
+                                We don't "wrap" ComfyUI. We Re-Engineer it.
+                            </p>
+                            <div className="space-y-6">
+                                <div className="flex items-start gap-4">
+                                    <span className="text-indigo-600 font-mono text-sm mt-1">01</span>
+                                    <div>
+                                        <p className="text-xl font-bold text-gray-900">100% Deterministic</p>
+                                        <p className="text-neutral-500 font-medium">Same inputs. Same pixel-perfect outputs. Every time.</p>
+                                    </div>
+                                </div>
+                                <div className="flex items-start gap-4">
+                                    <span className="text-indigo-600 font-mono text-sm mt-1">02</span>
+                                    <div>
+                                        <p className="text-xl font-bold text-gray-900">Global Scale</p>
+                                        <p className="text-neutral-500 font-medium">Deployed instantly to RunPod/Modal for cold-start safe inference.</p>
+                                    </div>
+                                </div>
+                                <div className="flex items-start gap-4">
+                                    <span className="text-indigo-600 font-mono text-sm mt-1">03</span>
+                                    <div>
+                                        <p className="text-xl font-bold text-gray-900">You Own Everything</p>
+                                        <p className="text-neutral-500 font-medium">No black boxes. You get the Git repo, the docs, and the rights.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </section>
 
-            </main>
+                {/* --- CAPABILITIES: Typographic Markers --- */}
+                <section id="services" className="mx-auto max-w-7xl px-3 sm:px-4 pb-24 lg:px-8">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-8">
+
+                        {/* 01 */}
+                        <div className="group">
+                            <div className="border-t border-neutral-200 pt-6 mb-6">
+                                <span className="text-neutral-400 font-mono text-sm group-hover:text-indigo-600 transition-colors">01</span>
+                            </div>
+                            <h3 className="text-2xl font-bold text-gray-900 mb-4 tracking-tight">Node Architecture</h3>
+                            <p className="text-lg text-neutral-600 font-medium leading-relaxed max-w-xs">
+                                Custom Python abstractions. Deterministic behavior. No visual spaghetti.
+                            </p>
+                        </div>
+
+                        {/* 02 */}
+                        <div className="group">
+                            <div className="border-t border-neutral-200 pt-6 mb-6">
+                                <span className="text-neutral-400 font-mono text-sm group-hover:text-indigo-600 transition-colors">02</span>
+                            </div>
+                            <h3 className="text-2xl font-bold text-gray-900 mb-4 tracking-tight">Global Scale</h3>
+                            <p className="text-lg text-neutral-600 font-medium leading-relaxed max-w-xs">
+                                Cold-start safe inference on RunPod and Modal.
+                            </p>
+                        </div>
+
+                        {/* 03 */}
+                        <div className="group">
+                            <div className="border-t border-neutral-200 pt-6 mb-6">
+                                <span className="text-neutral-400 font-mono text-sm group-hover:text-indigo-600 transition-colors">03</span>
+                            </div>
+                            <h3 className="text-2xl font-bold text-gray-900 mb-4 tracking-tight">Code Ownership</h3>
+                            <p className="text-lg text-neutral-600 font-medium leading-relaxed max-w-xs">
+                                You own the repo. You own the IP. Fully documented APIs.
+                            </p>
+                        </div>
+
+                    </div>
+                </section>
+
+                {/* --- METRICS: Rigid Facts --- */}
+                <section className="mx-auto max-w-7xl px-3 sm:px-4 pb-24 lg:px-8">
+                    <div className="grid md:grid-cols-3 gap-16 md:gap-24 text-left border-y border-neutral-100 py-16">
+
+                        {/* Metric 1 */}
+                        <div>
+                            <div className="text-6xl md:text-7xl font-mono font-medium mb-6 tracking-tighter text-gray-900">
+                                $2.5M+
+                            </div>
+                            <p className="text-xs text-neutral-400 font-mono uppercase tracking-widest leading-loose">
+                                verified client revenue<br />generated
+                            </p>
+                        </div>
+
+                        {/* Metric 2 */}
+                        <div>
+                            <div className="text-6xl md:text-7xl font-mono font-medium mb-6 tracking-tighter text-gray-900">
+                                35ms
+                            </div>
+                            <p className="text-xs text-neutral-400 font-mono uppercase tracking-widest leading-loose">
+                                average latency<br />overhead
+                            </p>
+                        </div>
+
+                        {/* Metric 3 */}
+                        <div>
+                            <div className="text-6xl md:text-7xl font-mono font-medium mb-6 tracking-tighter text-gray-900">
+                                21+
+                            </div>
+                            <p className="text-xs text-neutral-400 font-mono uppercase tracking-widest leading-loose">
+                                Enterprise-grade<br />systems deployed
+                            </p>
+                        </div>
+
+                    </div>
+                </section>
+
+                {/* --- CTA SECTION: Absolute Minimalism --- */}
+                <section id="audit" className="mx-auto max-w-5xl px-4 py-32 text-center">
+                    <h2 className="text-5xl md:text-6xl font-black text-gray-900 mb-8 tracking-tighter">
+                        Stop Debugging. Start Scaling.
+                    </h2>
+                    <p className="text-2xl text-neutral-500 mb-12 max-w-lg mx-auto font-medium tracking-tight">
+                        Don't let a missing node dependency cost you another client. Let’s turn your workflow into a software asset.
+                    </p>
+                    <a
+                        href="https://cal.com/pranamyajain"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center h-20 px-12 bg-gray-900 text-white font-bold text-lg tracking-widest uppercase hover:bg-indigo-600 rounded-lg transition-colors duration-300 shadow-2xl"
+                    >
+                        Book Your Architecture Audit
+                    </a>
+                </section>
+
+            </main >
             <Footer />
         </>
     );
